@@ -1,41 +1,48 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React, { ReactNode } from "react";
+import Link from "next/link";
+import Head from "next/head";
 
 type Props = {
-  children?: ReactNode
-  title?: string
-}
+  children?: ReactNode;
+  title?: string;
+};
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
+const Layout = ({ children, title = "Saleor SDK + Next.js" }: Props) => (
+  <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
+      <div className="mt-4 mb-4 text-center max-w-2xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-medium mb-2">
+          Saleor SDK + Next.js
+        </h1>
+      </div>
       <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
+        <div className="mt-1 mb-1 text-center max-w-2xl mx-auto">
+          <Link href="https://github.com/mirumee/saleor-sdk">
+            <a>SDK GitHub</a>
+          </Link>{" "}
+          |{" "}
+          <Link href="https://docs.saleor.io/">
+            <a>Saleor Docs</a>
+          </Link>
+        </div>
       </nav>
     </header>
-    {children}
+    <div className="w-9/12  mx-auto">{children}</div>
     <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
+      <div className="mt-12 text-center">
+        <p className="text-gray-500">
+          <a href="https://saleor.io/">
+            © Copyright Saleor Commerce {new Date().getFullYear()}
+          </a>
+        </p>
+      </div>
     </footer>
-  </div>
-)
+  </>
+);
 
-export default Layout
+export default Layout;

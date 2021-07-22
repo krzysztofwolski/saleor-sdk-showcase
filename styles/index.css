@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-input {
+    @apply block w-full shadow-sm py-2 px-3 rounded-md border-2 border-gray-300 mt-1 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent;
+  }
+
+  .action-button {
+    @apply inline-flex justify-center  space-x-2 border border-green-500 text-green-500 rounded-md px-4 py-1 m-1 transition duration-500  select-none hover:text-white hover:bg-green-600 focus:outline-none;
+  }
+
+  .card-footer {
+    @apply px-4 py-3 bg-gray-50 text-right sm:px-6 flex flex-row-reverse space-x-reverse space-x-4;
+  }
+}

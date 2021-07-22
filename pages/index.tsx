@@ -1,15 +1,20 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import AuthBlock from "../components/AuthBlock";
+import AuthStateBlock from "../components/AuthStateBlock";
+import BlockSpacer from "../components/BlockSpacer";
+import Layout from "../components/Layout";
+import RegisterBlock from "../components/RegisterBlock";
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
-
-export default IndexPage
+const IndexPage = () => {
+  return (
+    <Layout>
+      <BlockSpacer />
+      <AuthStateBlock />
+      <BlockSpacer />
+      <AuthBlock />
+      <BlockSpacer />
+      <RegisterBlock />
+      <BlockSpacer />
+    </Layout>
+  );
+};
+export default IndexPage;
