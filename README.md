@@ -1,4 +1,6 @@
-# Saleor SDK + TypeScript + Next.js example
+# Saleor SDK + TypeScript + Next.js showcase
+
+![image](https://user-images.githubusercontent.com/5188636/126720861-a5a0a041-c6ff-47d4-9762-86276cf319e2.png)
 
 Used libraries:
 
